@@ -7,11 +7,12 @@ import Gallery from './components/gallery.js'
 import Profile from './qcomps/profile_mistake.js'
 import Firstcomp from './qcomps/firstcomp.js'
 import Bio from './qcomps/bios.js'
+import TodoList from './qcomps/todos.js'
 
 export default function Home() {
   return (
     <div className={styles.main}>
-        <Bio />
+        <TodoList />
     </div>
   )
 }
