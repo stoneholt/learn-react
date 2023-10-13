@@ -1,3 +1,32 @@
+function Profile({person, size, profession, awards, discovered}) {
+  return (
+    <section className="profile">
+      <h2>{person.name}</h2>
+        <img
+            className="avatar"
+            src={'https://i.imgur.com/' + person.imageId + 's.jpg'}
+            alt={person.name}
+            width={size}
+            height={size}
+        />
+        <ul>
+          <li>
+            <b>Profession: </b>
+            {profession}
+          </li>
+          <li>
+            <b>Awards: {awards.amount} </b>
+            {awards.awardList}
+          </li>
+          <li>
+            <b>Discovered: </b>
+            {discovered}
+          </li>
+        </ul>
+    </section>
+  );
+}
+/*
 export default function Gallery() {
   return (
     <div>
@@ -50,6 +79,20 @@ export default function Gallery() {
           </li>
         </ul>
       </section>
+    </div>
+  );
+}
+*/
+export default function Gallery() {
+  return (
+    <div>
+      <h1>Notable Scientists</h1>
+        <Profile 
+          person={{ name: 'Maria Skłodowska-Curie', imageId: 'szV5sdG'}}
+          size={70} 
+          profession={'physicist and chemist'} 
+          awards={{amount: 4, awardList: '(Nobel Prize in Physics, Nobel Prize in Chemistry, Davy Medal, Matteucci Medal)'}}
+          discovered={'polonium (element)'}/>
     </div>
   );
 }
